@@ -1,4 +1,4 @@
-% Created 2025-09-05 Ven 18:28
+% Created 2025-09-05 Ven 18:48
 % Intended LaTeX compiler: pdflatex
 \documentclass[10pt]{article}
 %% CREATO CON ORG - EMACS
@@ -301,6 +301,11 @@
 	citecolor=black,
 %	colorlinks=true,
 	bookmarksopen=true}
+
+\newcommand{\Tdlo}{T_{\text{dlo}}}
+\newcommand{\Tlo}{T_{\text{lo}}}
+\newcommand{\Trg}{T_{\text{rg}}}
+\newcommand{\Tgph}{T_{\text{gph}}}
 \author{Silvia Barbina}
 \date{Scuola Estiva di Logica 2025}
 \title{Teoria dei modelli}
@@ -313,7 +318,7 @@
 \clearpage
 \end{latex}
 \section{Preliminari}
-\label{sec:org4708d21}
+\label{sec:org21fd3a1}
 
 Si lavora con un linguaggio
 \begin{equation*}
@@ -375,7 +380,7 @@ Una \(\mathcal{L}(A)\)-formula ha parametri in \(A\).
 \item \(M,N,U,V\) denotano struttura e \(A,B,C\) sono sottoinsiemi del dominio di una struttura.
 \end{itemize}
 \subsection{Immersioni e immersioni elementari}
-\label{sec:org9c2fbb8}
+\label{sec:org05f3c1b}
 
 Se \(M,N\) sono due \(\mathcal{L}\)-struttura, allora
 \begin{enumerate}
@@ -438,7 +443,7 @@ L'\uline{unione della catena} è la struttura \(M\) dove
 \item \(R\) relazione, allora \(R^{M} = \bigcup_{i<\lambda} R^{M_{i}}\).
 \end{itemize}
 \subsection{Teorema di Lowenheim-Skolem all'ingiù}
-\label{sec:orgfa89641}
+\label{sec:org18b498c}
 
 \begin{thm}
 Sia \(N\) una \(\mathcal{L}\)-struttura con \(|N|\ge |\mathcal{L}|+\omega\), e sia \(A \subseteq N\).
@@ -450,10 +455,10 @@ Allora per ogni \(\lambda\) tale che \(|A|+|\mathcal{L}|\le \lambda \le |N|\) es
 \end{enumerate}
 \end{thm}
 \section{Due Teorie}
-\label{sec:org51b7b1c}
+\label{sec:orgafae316}
 
 \subsection{Teoria degli ordini lineari}
-\label{sec:orgb6e1ce8}
+\label{sec:orgd66415c}
 
 Sia \(\mathcal{L}_{lo}=\set{<}\), con \(<\) relazione binaria. Una \(\mathcal{L}_{lo}\) struttura è un \uline{ordine lineare} se soddisfa
 \begin{enumerate}
@@ -473,19 +478,19 @@ Un ordine lineare è \uline{senza estremi} se
 
 ??? (vedi \href{../../../../org/roam/20250203101604-ordine.org}{Ordine lineare}, \href{../../../../org/roam/20250203101604-ordine.org}{Ordine denso}, \href{../../../../org/roam/20250203101604-ordine.org}{Ordine senza punto finale})
 
-(\(T_{lo}\) e \(T_{dlo}\))
+(\(\Tlo\) e \(\Tdlo\))
 \subsection{Teoria dei grafi}
-\label{sec:orgffd7af6}
+\label{sec:org9a1b66a}
 
-Sia \(\mathcal{L}_{gph} = \set{R}\). Un \uline{grafo} è una \(\mathcal{L}_{gph}\)-struttura che soddisfa
+Sia \(\mathcal{L}_{\text{gph}} = \set{R}\). Un \uline{grafo} è una \(\mathcal{L}_{\text{gph}}\)-struttura che soddisfa
 
 ??? (Vedi \href{../../../../org/roam/20250213123032-teoria_dei_grafi.org}{Teoria dei grafi}, \href{../../../../org/roam/20250213123032-teoria_dei_grafi.org}{Teoria dei grafi aleatori})
 
-(\(T_{gph}\) e \(T_{rg}\))
+(\(\Tgph\) e \(\Trg\))
 
-I modelli di \(T_{dlo}\) e \(T_{rg}\) sono necessariamente infiniti.
-\subsection{Risultati per \(T_{dlo}\) e \(T_{rg}\)}
-\label{sec:orga572247}
+I modelli di \(\Tdlo\) e \(\Trg\) sono necessariamente infiniti.
+\subsection{Risultati per \(\Tdlo\) e \(\Trg\)}
+\label{sec:org0147f01}
 
 \begin{definizione}
 Siano \(M,N\) due \(\mathcal{L}\)-strutture. Un'\uline{immersione parziale} è una mappa iniettiva
@@ -534,11 +539,11 @@ Allora \(p=\bigcup_{i \in \omega}p_{i}\) è l'isomorfismo cercato.
 \end{proof}
 
 \begin{thm}
-Siano \(M,N\vDash T_{dlo}\) con \(\card{M}=\card{N}=\omega\). Allora \(M\cong N\).
+Siano \(M,N\vDash \Tdlo\) con \(\card{M}=\card{N}=\omega\). Allora \(M\cong N\).
 \end{thm}
 
 \begin{proof}
-Se \(p:M\to N\) è un'immersione parziale con \(\card{\operatorname{dom}(p)}<\omega\) e \(c \in M\), allora, per gli assiomi di \(T_{dlo}\) è possibile trovare \(d \in N\) tale che \(p\cup\set{(c,d)}\) è ancora un'immersione parziale.
+Se \(p:M\to N\) è un'immersione parziale con \(\card{\operatorname{dom}(p)}<\omega\) e \(c \in M\), allora, per gli assiomi di \(\Tdlo\) è possibile trovare \(d \in N\) tale che \(p\cup\set{(c,d)}\) è ancora un'immersione parziale.
 
 Analogamente, se \(d \in N\) e \(p:M\to N\) è un'immersione parziale con \(\card{\operatorname{dom}(p)}<\omega\), troviamo \(c \in N\) tale che \(p\cup\set{(c,d)}\) è ancora un'immersione parziale.
 
@@ -548,7 +553,7 @@ Per il lemma dell'andirivieni, \(M\cong N\).
 \end{proof}
 
 \begin{cor}
-\(T_{dlo}\) è \(\omega\)-categorica.
+\(\Tdlo\) è \(\omega\)-categorica.
 \end{cor}
 
 \begin{oss}
@@ -556,21 +561,21 @@ Ogni teoria \(\omega\)-categorica \(T\) con un modello infinito è completa. Inf
 \end{oss}
 
 \begin{cor}
-\(T_{dlo}\) è completa.
+\(\Tdlo\) è completa.
 \end{cor}
 
 \begin{thm}
-\(T_{rg}\) è coerente.
+\(\Trg\) è coerente.
 \end{thm}
 
 \begin{proof}
 Si definisce un grafo su \(\omega\) come segue: per \(i<j\), \(R(i,j)\) sse la cifra \(i\)-esima nell'espansione binaria di \(j\) è \(1\).
 
-Dimostrare che \(\langle \omega,R\rangle \vDash T_{rg}\).
+Dimostrare che \(\langle \omega,R\rangle \vDash \Trg\).
 \end{proof}
 
 \begin{thm}
-Siano \(M,N\vDash T_{rg}\) con \(\card{M}=\card{N}=\omega\). Allora \(M\cong N\).
+Siano \(M,N\vDash \Trg\) con \(\card{M}=\card{N}=\omega\). Allora \(M\cong N\).
 \end{thm}
 
 \begin{proof}
@@ -591,10 +596,10 @@ M\vDash R\big(m,a\big)\quad\iff\quad R\big(n,p(a)\big)
 \end{proof}
 
 \begin{cor}
-\(T_{rg}\) è \(\omega\)-categorica e completa.
+\(\Trg\) è \(\omega\)-categorica e completa.
 \end{cor}
 
-Il modello numerabile \(\Gamma\) di \(T_{rg}\) si chiama \uline{grafo di Rado}, o \uline{random graph}.
+Il modello numerabile \(\Gamma\) di \(\Trg\) si chiama \uline{grafo di Rado}, o \uline{random graph}.
 
 Ogni grafo finito e ogni grafo numerabile si immerge in \(\Gamma\).
 
@@ -623,7 +628,7 @@ Allora \(f\upharpoonright \set{a}\) è finita e non elementare.
 \end{proof}
 
 \begin{thm}
-Siano \(M,N\vDash T_{dlo}\) (o \(T_{rg}\)), e sia \(p:M\to N\) un'immersione parziale. Allora \(p\) è elementare.
+Siano \(M,N\vDash \Tdlo\) (o \(\Trg\)), e sia \(p:M\to N\) un'immersione parziale. Allora \(p\) è elementare.
 \end{thm}
 \begin{proof}
 In virtù della proposizione precedente, basta il caso \(\card{p}<\omega\).
@@ -641,7 +646,7 @@ In particolare, \(p\) è elementare.
 \(\langle \Q,<\rangle\preceq\langle \R,<\rangle\)
 \end{cor}
 \section{Tipi}
-\label{sec:org9f3046d}
+\label{sec:org8dd2e74}
 
 Tutte le strutture si intendono in un linguaggio \(\mathcal{L}\) fissato.
 
@@ -765,7 +770,7 @@ Allora \(p(x)\) è finitamente soddisfacibile in \(M\), e dunque realizzato in \
 Per Lowenheim-Skolem all'ingiù, possiamo assumere \(\card{N}=\lambda\).
 \end{proof}
 \section{Saturazione}
-\label{sec:orgd14c41a}
+\label{sec:org39b7c7c}
 
 \begin{definizione}
 Sia \(\lambda\) un cardinale infinito. La struttura \(M\) si dice \(\lambda\)-satura se realizza ogni tipo \(p(x) \subseteq \mathcal{L}(A)\) (per \(A \subseteq M\)) con
@@ -853,7 +858,7 @@ Se \(M,N\) sono saturi con \(\card{M}=\card{N}\), allora ogni mappa elementare \
 In particolare, se \(M,N\) sono saturi, \(\operatorname{Th}(M)=\operatorname{Th}(N)\) e \(\card{M}=\card{N}\), allora \(M\cong N\).
 \end{cor}
 \begin{cor}
-Se \(M\vDash T_{dlo}\) o \(M\vDash T_{rg}\), allora \(M\) è \(\omega\)-saturo.
+Se \(M\vDash \Tdlo\) o \(M\vDash \Trg\), allora \(M\) è \(\omega\)-saturo.
 \end{cor}
 
 Ricordiamo che un \uline{automorfismo} di una struttura \(M\) è un isomorfismo \(M\to M\). Gli automorfismi di \(M\) formano un gruppo, scritto \(\operatorname{Aut}(M)\).
@@ -943,7 +948,7 @@ b \in O_{N}(a/A).\qedhere
 \end{equation*}
 \end{proof}
 \section{Modello mostro}
-\label{sec:orgf7e3714}
+\label{sec:orgec9c017}
 
 Sia \(T\) una teoria completa senza modelli finiti. Lavoriamo in \(\mathcal{U}\vDash T\) tale che
 \begin{enumerate}
@@ -1075,7 +1080,7 @@ Allora \(\varphi(\mathcal{U},b)\) è definito da
 \end{equation*}
 \end{proof}
 \subsection{Eliminazione dei quantificatori}
-\label{sec:orgfb66856}
+\label{sec:org45d789a}
 
 \begin{prop}
 Sia \(\varphi(x) \in \mathcal{L}\). Sono fatti equivalenti:
@@ -1152,7 +1157,7 @@ Dal teorema precedente, \(\varphi(x)\) è equivalente a \(\psi(x)\) senza quanti
 (\(3.\Rightarrow 2.\)) (traccia): Se \(p_{0}\subseteq p\), \(\card{p_{0}}<\omega\), estendiamo \(p_{0}\) ad \(\alpha \in \operatorname{Aut}(\mathcal{U})\) per back-and-forth. Allora \(p_{0}\) è elementare.
 \end{proof}
 \subsection{Insiemi definibili e algebrici}
-\label{sec:org1e79753}
+\label{sec:org8aceb7c}
 
 \begin{definizione}
 \begin{enumerate}
@@ -1172,7 +1177,7 @@ Dal teorema precedente, \(\varphi(x)\) è equivalente a \(\psi(x)\) senza quanti
 Ovviamente \(\operatorname{dcl}(A) \subseteq \operatorname{acl}(A)\)
 
 \begin{esempio}
-Sia \(T_{do} =\operatorname{Th}(\Z,<)\). Si dimostra che \(T_{\text{do}}\) è assiomatizzata da
+Sia \(T_{\text{do}} =\operatorname{Th}(\Z,<)\). Si dimostra che \(T_{\text{do}}\) è assiomatizzata da
 \begin{align*}
 \forall x\ &\lnot(x<x)\\
 \forall x,y,z\ &\big[(x<y \land y<z)\implies x<z\big]\\
@@ -1298,7 +1303,7 @@ Segue che \(\beta(a)\) è algebrico su \(\beta(b)\), e dunque
 \end{equation*}
 \end{proof}
 \section{Teorie Fortemente Minimali}
-\label{sec:org98ed2af}
+\label{sec:org6b65e75}
 
 Ricordiamo che in ogni struttura \(M\), gli insiemi finiti e cofiniti sono sempre definibili.
 

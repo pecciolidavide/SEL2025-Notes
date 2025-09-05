@@ -2,6 +2,11 @@
 #+author: Silvia Barbina
 #+date: Scuola Estiva di Logica 2025
 
+#+latex_header: \newcommand{\Tdlo}{T_{\text{dlo}}}
+#+latex_header: \newcommand{\Tlo}{T_{\text{lo}}}
+#+latex_header: \newcommand{\Trg}{T_{\text{rg}}}
+#+latex_header: \newcommand{\Tgph}{T_{\text{gph}}}
+
 #+begin_latex
 \clearpage
 #+end_latex
@@ -140,19 +145,19 @@ Un ordine lineare è _senza estremi_ se
 
 ??? (vedi [[id:c9007816-7ef7-41aa-bc68-38526c8aec31][Ordine lineare]], [[id:59d9fb18-ff76-4e78-a088-4d6b462b58e3][Ordine denso]], [[id:a6c2fea9-a043-40b0-a307-6c050b1d4eee][Ordine senza punto finale]])
 
-(\(T_{lo}\) e \(T_{dlo}\))
+(\(\Tlo\) e \(\Tdlo\))
 
 ** Teoria dei grafi
 
-Sia \(\mathcal{L}_{gph} = \set{R}\). Un _grafo_ è una \(\mathcal{L}_{gph}\)-struttura che soddisfa
+Sia \(\mathcal{L}_{\text{gph}} = \set{R}\). Un _grafo_ è una \(\mathcal{L}_{\text{gph}}\)-struttura che soddisfa
 
 ??? (Vedi [[id:84458b05-0b76-4967-8276-baf222382c78][Teoria dei grafi]], [[id:e05d8a6f-634d-4a62-8b1d-23eefeaab240][Teoria dei grafi aleatori]])
 
-(\(T_{gph}\) e \(T_{rg}\))
+(\(\Tgph\) e \(\Trg\))
 
-I modelli di \(T_{dlo}\) e \(T_{rg}\) sono necessariamente infiniti.
+I modelli di \(\Tdlo\) e \(\Trg\) sono necessariamente infiniti.
 
-** Risultati per \(T_{dlo}\) e \(T_{rg}\)
+** Risultati per \(\Tdlo\) e \(\Trg\)
 
 #+BEGIN_definizione
 Siano \(M,N\) due \(\mathcal{L}\)-strutture. Un'_immersione parziale_ è una mappa iniettiva
@@ -197,11 +202,11 @@ Allora \(p=\bigcup_{i \in \omega}p_{i}\) è l'isomorfismo cercato.
 #+END_proof
 
 #+BEGIN_thm
-Siano \(M,N\vDash T_{dlo}\) con \(\card{M}=\card{N}=\omega\). Allora \(M\cong N\).
+Siano \(M,N\vDash \Tdlo\) con \(\card{M}=\card{N}=\omega\). Allora \(M\cong N\).
 #+END_thm
 
 #+BEGIN_proof
-Se \(p:M\to N\) è un'immersione parziale con \(\card{\operatorname{dom}(p)}<\omega\) e \(c \in M\), allora, per gli assiomi di \(T_{dlo}\) è possibile trovare \(d \in N\) tale che \(p\cup\set{(c,d)}\) è ancora un'immersione parziale.
+Se \(p:M\to N\) è un'immersione parziale con \(\card{\operatorname{dom}(p)}<\omega\) e \(c \in M\), allora, per gli assiomi di \(\Tdlo\) è possibile trovare \(d \in N\) tale che \(p\cup\set{(c,d)}\) è ancora un'immersione parziale.
 
 Analogamente, se \(d \in N\) e \(p:M\to N\) è un'immersione parziale con \(\card{\operatorname{dom}(p)}<\omega\), troviamo \(c \in N\) tale che \(p\cup\set{(c,d)}\) è ancora un'immersione parziale.
 
@@ -211,7 +216,7 @@ Per il lemma dell'andirivieni, \(M\cong N\).
 #+END_proof
 
 #+BEGIN_cor
-\(T_{dlo}\) è \(\omega\)-categorica.
+\(\Tdlo\) è \(\omega\)-categorica.
 #+END_cor
 
 #+BEGIN_oss
@@ -219,21 +224,21 @@ Ogni teoria \(\omega\)-categorica \(T\) con un modello infinito è completa. Inf
 #+END_oss
 
 #+BEGIN_cor
-\(T_{dlo}\) è completa.
+\(\Tdlo\) è completa.
 #+END_cor
 
 #+BEGIN_thm
-\(T_{rg}\) è coerente.
+\(\Trg\) è coerente.
 #+END_thm
 
 #+BEGIN_proof
 Si definisce un grafo su \(\omega\) come segue: per \(i<j\), \(R(i,j)\) sse la cifra \(i\)-esima nell'espansione binaria di \(j\) è \(1\).
 
-Dimostrare che \(\langle \omega,R\rangle \vDash T_{rg}\).
+Dimostrare che \(\langle \omega,R\rangle \vDash \Trg\).
 #+END_proof
 
 #+BEGIN_thm
-Siano \(M,N\vDash T_{rg}\) con \(\card{M}=\card{N}=\omega\). Allora \(M\cong N\).
+Siano \(M,N\vDash \Trg\) con \(\card{M}=\card{N}=\omega\). Allora \(M\cong N\).
 #+END_thm
 
 #+BEGIN_proof
@@ -254,10 +259,10 @@ M\vDash R\big(m,a\big)\quad\iff\quad R\big(n,p(a)\big)
 #+END_proof
 
 #+BEGIN_cor
-\(T_{rg}\) è \(\omega\)-categorica e completa.
+\(\Trg\) è \(\omega\)-categorica e completa.
 #+END_cor
 
-Il modello numerabile \(\Gamma\) di \(T_{rg}\) si chiama _grafo di Rado_, o _random graph_.
+Il modello numerabile \(\Gamma\) di \(\Trg\) si chiama _grafo di Rado_, o _random graph_.
 
 Ogni grafo finito e ogni grafo numerabile si immerge in \(\Gamma\).
 
@@ -286,7 +291,7 @@ Allora \(f\upharpoonright \set{a}\) è finita e non elementare.
 #+END_proof
 
 #+BEGIN_thm
-Siano \(M,N\vDash T_{dlo}\) (o \(T_{rg}\)), e sia \(p:M\to N\) un'immersione parziale. Allora \(p\) è elementare.
+Siano \(M,N\vDash \Tdlo\) (o \(\Trg\)), e sia \(p:M\to N\) un'immersione parziale. Allora \(p\) è elementare.
 #+END_thm
 #+BEGIN_proof
 In virtù della proposizione precedente, basta il caso \(\card{p}<\omega\).
@@ -496,7 +501,7 @@ Se \(M,N\) sono saturi con \(\card{M}=\card{N}\), allora ogni mappa elementare \
 In particolare, se \(M,N\) sono saturi, \(\operatorname{Th}(M)=\operatorname{Th}(N)\) e \(\card{M}=\card{N}\), allora \(M\cong N\).
 #+END_cor
 #+BEGIN_cor
-Se \(M\vDash T_{dlo}\) o \(M\vDash T_{rg}\), allora \(M\) è \(\omega\)-saturo.
+Se \(M\vDash \Tdlo\) o \(M\vDash \Trg\), allora \(M\) è \(\omega\)-saturo.
 #+END_cor
 
 Ricordiamo che un _automorfismo_ di una struttura \(M\) è un isomorfismo \(M\to M\). Gli automorfismi di \(M\) formano un gruppo, scritto \(\operatorname{Aut}(M)\).
@@ -793,7 +798,7 @@ Dal teorema precedente, \(\varphi(x)\) è equivalente a \(\psi(x)\) senza quanti
 Ovviamente \(\operatorname{dcl}(A) \subseteq \operatorname{acl}(A)\)
 
 #+begin_esempio
-Sia \(T_{do} =\operatorname{Th}(\Z,<)\). Si dimostra che \(T_{\text{do}}\) è assiomatizzata da
+Sia \(T_{\text{do}} =\operatorname{Th}(\Z,<)\). Si dimostra che \(T_{\text{do}}\) è assiomatizzata da
 \begin{align*}
 \forall x\ &\lnot(x<x)\\
 \forall x,y,z\ &\big[(x<y \land y<z)\implies x<z\big]\\
